@@ -1,0 +1,34 @@
+{
+  "name": "worked",
+  "version": "0.0.0",
+  "description": "Amazon SQS backed worker queue",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brianc/node-worked.git"
+  },
+  "keywords": [
+    "worker",
+    "queue",
+    "that",
+    "doesn't",
+    "suck"
+  ],
+  "author": "Brian M. Carlson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianc/node-worked/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0"
+  },
+  "dependencies": {
+    "okay": "~0.3.0",
+    "aws-sdk": "~1.10.0",
+    "lodash": "~2.2.1",
+    "logged": "~0.2.1"
+  }
+}

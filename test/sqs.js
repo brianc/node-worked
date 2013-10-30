@@ -4,18 +4,8 @@ var ok = require('okay')
 
 var Queue = require('../lib/queue')
 
-var queueName = 'test' + Date.now()
-
-describe('missing queue', function() {
-  it('push returns error', function(done) {
-    var queue = new Queue('asdf')
-    queue.push('whatever', function(err, res) {
-      assert(err)
-      done()
-    })
-  })
-})
-
+var queuePrefix = 'sqs-test'
+var queueName = queuePrefix + Date.now()
 
 describe('existing queue', function() {
   before(function(done) {
@@ -76,3 +66,14 @@ describe('existing queue', function() {
     })
   })
 })
+
+describe('missing queue', function() {
+  it('push returns error', function(done) {
+    var queue = new Queue('asdf')
+    queue.push('whatever', function(err, res) {
+      assert(err)
+      done()
+    })
+  })
+})
+
